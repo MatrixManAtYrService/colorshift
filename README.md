@@ -24,7 +24,7 @@ No configs necessary.  Autosuggestion color set whether or not it is installed. 
 
 #### dircolors
 
-modify [darken.sh](darken.sh) or [lighten.sh](lighten.sh) to provide a path to the dircolors file of preference.
+modify [darken.sh](darken.sh) or [lighten.sh](lighten.sh) to provide a path to the preferred dircolors file.
 
 #### gnome-terminal
 
