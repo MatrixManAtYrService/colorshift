@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+if command -v dconf &> /dev/null && command -v gsettings &> /dev/null
+then
+    echo gnome-terminal profiles:
+    theme_id=$(dconf dump /org/gnome/terminal/legacy/profiles:/ \
+        | grep 'visible' -B 8 \
+        | egrep -e '^\[.[0-9a-f]{8}' -e 'visible' \
+        | sed '$!N;s/\n/ /' \
+        | tr -d []\': \
+        | sed 's/visible-name=//' \
+        | tee >(cat 1>&2) \
+        | grep -i " $1$" \
+        | sed 's/\([^ ]*\).*/\1/')
+    echo
+    echo "$theme_id <-- Chosen"
+    echo
+    gsettings set org.gnome.Terminal.ProfilesList default $theme_id
+fi
