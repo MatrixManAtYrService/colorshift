@@ -22,6 +22,9 @@ requires https://github.com/altercation/vim-colors-solarized
 
 No configs necessary.  Autosuggestion color set whether or not it is installed.  Be sure to include zsh section (below) *after* you source zsh-autosuggestions.
 
+#### zsh-easy-motion
+No configs necessary.  Easy motion highlight color set whether or not it is installed.  Be sure to include zsh section (below) *after* you source zsh-easy-motion.
+
 #### dircolors
 
 modify [darken.sh](darken.sh) or [lighten.sh](lighten.sh) to provide a path to the preferred dircolors file.
