@@ -17,6 +17,9 @@ dircolors_file ~/.config/dircolors/dircolors-solarized/dircolors.ansi-dark
 # zsh suggestion style
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=180'
 
+# zsh easy motion
+EASY_MOTION_DIM="fg=60,bold"
+
 # urxvt
 cp ~/.config/xresources/Xresources.light ~/.Xresources
 xrdb -load ~/.Xresources
