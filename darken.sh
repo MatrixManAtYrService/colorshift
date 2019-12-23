@@ -8,7 +8,7 @@ export CONSOLE_THEME="dark"
 echo "$this_file_parent_dir/darken.sh" > ~/.config/colorshift/target_file.txt
 
 # modify gnome-terminal default profile
-#"$this_file_parent_dir/set_gnome_default" Dark
+"$this_file_parent_dir/set_gnome_default" Dark
 
 # apply dircolors
 source "$this_file_parent_dir/dircolors.sh"
@@ -18,8 +18,11 @@ dircolors_file ~/.config/dircolors/dircolors-solarized/dircolors.ansi-dark
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
 
 # zsh easy motion
-EASY_MOTION_DIM="fg=180,bold"
+EASY_MOTION_DIM="fg=60,bold"
 
 # urxvt
-cp ~/.config/xresources/Xresources.dark ~/.Xresources
-xrdb -load ~/.Xresources
+if [ -f ~/.config/xresources/Xresources.dark ]
+then
+    cp ~/.config/xresources/Xresources.dark ~/.Xresources
+    xrdb -load ~/.Xresources
+fi
